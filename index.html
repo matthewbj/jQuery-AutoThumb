@@ -47,7 +47,7 @@ $("my-selector").autoThumb({
   <p>If you like this plugin, please let me know.<a href="https://twitter.com/matthewbjordan" target="_blank" style="color:#036">@matthewbjordan</a> </p>
   <small>* Not recommended for use with a lot of large images.</small> </div>
 <div id="sidebar"> <a href="https://github.com/matthewbj/jQuery-AutoThumb">View on GitHub</a> <a href="https://github.com/matthewbj/jQuery-AutoThumb/tarball/master">Download tar.gz</a> <a href="https://github.com/matthewbj/jQuery-AutoThumb/zipball/master">Download .zip</a> </div>
-<p id="credit">Handcrafted with &#9829; by <a href="https://twitter.com/matthewbjordan" target="_blank">@matthewbjordan</a></p>
+<p id="credit">Handcrafted with <a href="http://gotthelove.org/p/49" target="_blank" style="color:#036;font-size:1.3em;text-decoration:none">&#9829;</a> by <a href="https://twitter.com/matthewbjordan" target="_blank">@matthewbjordan</a></p>
 <script>
 /* jQuery AutoThumb Plugin - https://github.com/matthewbj/jQuery-AutoThumb * by @matthewbjordan * CC BY-SA 3.0 License (http://creativecommons.org/licenses/by-sa/3.0/) */
 (function(b){b.fn.autoThumb=function(l){var d=b.extend({maxWidth:150,maxHeight:200,lightbox:!0},l);return this.each(function(){var a=b(this),f=0,g=a.width(),h=a.height();a.data("original-size",{width:g,height:h});g>d.maxWidth&&(f=d.maxWidth/g,a.attr({width:d.maxWidth,height:h*f}),h*=f);g=a.width();h=a.height();h>d.maxHeight&&(f=d.maxHeight/h,a.attr({height:d.maxHeight,width:g*f}),g*=f);if(!1!==d.lightbox)a.css("cursor","pointer").attr("title","View Larger").on("click",function(){var a=b(this),d=g,
