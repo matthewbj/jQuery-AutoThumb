@@ -1,11 +1,6 @@
 /*
   jQuery AutoThumb Plugin - https://github.com/matthewbj/jQuery-AutoThumb
-  Created by Matt Jordan
-  Released under the CC BY-SA 3.0 License (http://creativecommons.org/licenses/by-sa/3.0/)  
-*/
-/*
-  jQuery AutoThumb Plugin - https://github.com/matthewbj/jQuery-AutoThumb
-  Created by Matt Jordan
+  Created by @matthewbjordan
   Released under the CC BY-SA 3.0 License (http://creativecommons.org/licenses/by-sa/3.0/)  
 */
 (function ($) {
