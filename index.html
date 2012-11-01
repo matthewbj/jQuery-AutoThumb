@@ -1,14 +1,14 @@
-<!DOCTYPE html> <html> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <title>jQuery AutoThumb Plugin</title> <link rel="shortcut icon" href="http://cds.matthewbjordan.me/favicon.ico"> <link href="http://fonts.googleapis.com/css?family=Courgette&amp;text=%21%2CAabeEhjmoQrstTuy" rel="stylesheet" type="text/css"> <link href="http://c801535.r35.cf2.rackcdn.com/github-src/autothumb.css" rel="stylesheet" type="text/css"> <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> </head>
+<!DOCTYPE html> <html> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="description" content="An easy to use jQuery plugin for creating thumbnails and lightboxes for large images."> <meta name="author" content="@matthewbjordan"> <title>jQuery AutoThumb Plugin</title> <link rel="shortcut icon" href="http://cds.matthewbjordan.me/favicon.ico"> <link href="http://fonts.googleapis.com/css?family=Courgette&amp;text=%21%2CAabeEhjmoQrstTuy" rel="stylesheet" type="text/css"> <link href="http://c801535.r35.cf2.rackcdn.com/github-src/autothumb.css" rel="stylesheet" type="text/css"> <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> </head>
 <body> <div id="content"> <div id="headings"> <h1>jQuery AutoThumb</h1> <h2>Easy, easy.</h2> <h3>An easy to use jQuery plugin for creating thumbnails and lightboxes for large images.</h3> </div> <p style="margin-top:90px">Click an image to see it in action...</p> <img src="http://c801535.r35.cf2.rackcdn.com/github-src/animals-4.jpg" height="480" width="640" alt="Sample Image" class="demo"> <img src="http://c801535.r35.cf2.rackcdn.com/github-src/animals-3.jpg" height="480" width="640" alt="Sample Image" class="demo"> <img src="http://c801535.r35.cf2.rackcdn.com/github-src/animals-2.jpg" height="480" width="640" alt="Sample Image" class="demo"> <img src="http://c801535.r35.cf2.rackcdn.com/github-src/animals-1.jpg" height="480" width="640" alt="Sample Image" class="demo"> <div style="clear:both; margin-bottom:70px;"></div> <h3>How to Use</h3> <p>HTML:</p> <pre>
 HEAD: &lt;link href="/path/to/jquery.autothumb.css" rel="stylesheet" type="text/css"&gt;
-BODY: &lt;img src="/path/to/image.jpg" height="480" width="640" alt="My Image"&gt;</pre>
+BODY: &lt;img src="/path/to/image.jpg" class="my-img-class" height="480" width="640" alt="My Image"&gt;</pre>
   <p>JavaScript:</p>
   <pre>
 &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script src="/path/to/jquery.autothumb.min.js"&gt;&lt;/script&gt;
   
 $(document).ready(function () {
-    $("my-selector").autoThumb();
+    $(".my-img-class").autoThumb();
 });</pre> <p>Easy peasy... The above code will take every image that matches the selector and scale it down to either 150px wide or 200px high by default. When the image is clicked, it will expand to it's normal size.</p> <p>The best part is, the full image is loaded &ndash; so there is no waiting for the large image to come up*...</p> <hr> <h4>Current options <small>(none are required)</small>:</h4> <pre>
 $("my-selector").autoThumb({
     maxWidth: xxx, // Number in pixels. Default: 150
@@ -21,9 +21,11 @@ $("my-selector").autoThumb({
 f=h,c=a.data("original-size"),i=b(window),e=c.height,c=c.width,j=i.width()-25,i=i.height()-75;if(k===false){k=true;b('<div id="autoThumb-modal" /><div id="autoThumb-modal-bg" />').appendTo("body")}if(c>j){e=e*(j/c);c=j}if(e>i){e=i;c=d*(i/f)}a='<img src="'+a.attr("src")+'" height="'+e+'" width="'+c+'" alt="Loading..." class="autoThumb-image"><div id="autoThumb-modal-close" />';e={width:c,height:e,"margin-top":"-"+Math.round(e/2+6)+"px","margin-left":"-"+Math.round(c/2+6)+"px"};b("#autoThumb-modal-bg").fadeIn(400);
 b("#autoThumb-modal").html(a).css(e).fadeIn(400)})})};var k=!1;b(document).on("click","#autoThumb-modal-close, #autoThumb-modal-bg",function(){b("[id^=autoThumb-modal]").fadeOut(400,function(){b("#autoThumb-modal").html("")})})})(jQuery);
 
+
 // Code for the demo - Easy, easy.
 $(document).ready(function () {
     $('img.demo').autoThumb();
 });
+
 
 var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-10456811-7"]);_gaq.push(["_trackPageview"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script></body></html>
